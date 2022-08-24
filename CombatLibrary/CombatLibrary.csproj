@@ -41,18 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encounters.cs" />
+    <Compile Include="EncounterLogic.cs" />
+    <Compile Include="CombatLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DungeonAppV3\DungeonAppV3.csproj">
-      <Project>{50c8d887-eb76-4d93-a22a-562150378455}</Project>
-      <Name>DungeonAppV3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PlayerClassLibrary\PlayerClassLibrary.csproj">
-      <Project>{ef1123de-fba7-42a7-8f41-26bb377583be}</Project>
-      <Name>PlayerClassLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

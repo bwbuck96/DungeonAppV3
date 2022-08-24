@@ -4,10 +4,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.1800
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonAppV3", "DungeonAppV3\DungeonAppV3.csproj", "{50C8D887-EB76-4D93-A22A-562150378455}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EF1123DE-FBA7-42A7-8F41-26BB377583BE} = {EF1123DE-FBA7-42A7-8F41-26BB377583BE}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerClassLibrary", "PlayerClassLibrary\PlayerClassLibrary.csproj", "{EF1123DE-FBA7-42A7-8F41-26BB377583BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombatLibrary", "CombatLibrary\CombatLibrary.csproj", "{DDB3C8A0-EA79-48B5-916D-243A7BDEA894}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50C8D887-EB76-4D93-A22A-562150378455} = {50C8D887-EB76-4D93-A22A-562150378455}
+		{EF1123DE-FBA7-42A7-8F41-26BB377583BE} = {EF1123DE-FBA7-42A7-8F41-26BB377583BE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
