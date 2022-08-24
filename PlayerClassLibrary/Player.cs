@@ -13,19 +13,27 @@ namespace PlayerClassLibrary
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
         public int Damage { get; set; }
+        public int Block { get; set; }
 
 
         public Character()
         {
 
         }
-        public Character(string name, int maxHealth, int currentHealth, int damage)
+        public Character(string name, int maxHealth, int currentHealth, int damage, int block)
         {
             Name = name;
             MaxHealth = maxHealth;
             CurrentHealth = currentHealth;
             Damage = damage;
+            Block = block;
+
             
+        }
+
+        public virtual int CalcDamage()
+        {
+            return 0;
         }
     }
 
@@ -44,12 +52,21 @@ namespace PlayerClassLibrary
         {
 
         }
-        public Player(string name, int coins, int maxHealth, int currentHealth, int damage, int armor, int potionCount, int weaponValue) : base(name, currentHealth, maxHealth, damage)
+        public Player(string name, int coins, int maxHealth, int currentHealth, int damage, int armor, int potionCount, int weaponValue, int block) : base(name, currentHealth, maxHealth, damage, block)
         {
             Coins = coins;
             ArmorValue = armor;
             PotionCount = potionCount;
             WeaponValue = weaponValue;
+        }
+
+        public override int CalcDamage()
+        {
+            Random rand = new Random();
+
+            int damage = rand.Next(1, WeaponValue + 1);
+
+            return damage;
         }
 
 
